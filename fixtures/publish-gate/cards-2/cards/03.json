@@ -1,0 +1,33 @@
+{
+  "card_no": 3,
+  "kind": "metric",
+  "title": "09-05 활동 지표 급락\n원인은 확인 안 됨",
+  "body": [
+    "있템 등록 12건 (다른 날 24~33건)",
+    "활성 사용자 9명 (다른 날 16~20명)",
+    "같은 날 배포 실패와 겹치지만 인과관계 확인 불가",
+    "확인 방법(추정): 시간대별 로그 대조 필요"
+  ],
+  "sources": [
+    "get_user_metrics · series[2026-09-05]",
+    "get_system_health · deployments[dpl_b2].created_at"
+  ],
+  "chart_path": "charts/03.svg",
+  "accent": "warn",
+  "layers": {
+    "title": [
+      "09-05 활동 지표 급락",
+      "원인은 확인 안 됨"
+    ],
+    "body": [
+      "있템 등록 12건 (다른 날 24~33건)",
+      "활성 사용자 9명 (다른 날 16~20명)",
+      "같은 날 배포 실패와 겹치지만 인과관계 확인 불가",
+      "확인 방법(추정): 시간대별 로그 대조 필요"
+    ],
+    "source": [
+      "get_user_metrics · series[2026-09-05]",
+      "get_system_health · deployments[dpl_b2].created_at"
+    ]
+  }
+}

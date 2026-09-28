@@ -1,0 +1,33 @@
+{
+  "card_no": 5,
+  "kind": "text",
+  "title": "이번 주 확인 못한 항목 정리",
+  "body": [
+    "함수 에러 수: 조회 불가(unavailable)",
+    "사용자 지표 일별 시리즈: 09-04~09-08 결측",
+    "개발 활동(GitHub): API 레이트리믷으로 이번 회도에서 호출 실패",
+    "세 항목 모두 다음 번 재조회 필요"
+  ],
+  "sources": [
+    "get_system_health · unavailable_fields (function_errors.count)",
+    "get_user_metrics · unavailable_fields (series[2026-09-04..2026-09-08])"
+  ],
+  "accent": "warn",
+  "category": "watch",
+  "layers": {
+    "title": [
+      "이번 주 확인 못한 항목 정리"
+    ],
+    "body": [
+      "함수 에러 수: 조회 불가(unavailable)",
+      "사용자 지표 일별 시리즈: 09-04~09-08 결측",
+      "개발 활동(GitHub): API 레이트리믷으로 이번",
+      "회도에서 호출 실패",
+      "세 항목 모두 다음 번 재조회 필요"
+    ],
+    "source": [
+      "get_system_health · unavailable_fields (function_errors.count)",
+      "get_user_metrics · unavailable_fields (series[2026-09-04..2026-09-08])"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "card_no": 5,
+  "kind": "text",
+  "title": "열린 버그 2건\nPR 1건 미머지",
+  "body": [
+    "#11 모바일 카테고리 필터 겹침 (5일째)",
+    "#13 쓴템 표시가 목록에서 사라짐 (3일째)",
+    "PR #14 열린 지 4일째, draft 아님",
+    "이번 기간 커밋 21건 (작성자 1명)",
+    "병합된 PR 3건"
+  ],
+  "sources": [
+    "get_dev_activity · open_issues",
+    "get_dev_activity · pull_requests",
+    "get_dev_activity · summary"
+  ],
+  "accent": "accent",
+  "layers": {
+    "title": [
+      "열린 버그 2건",
+      "PR 1건 미머지"
+    ],
+    "body": [
+      "#11 모바일 카테고리 필터 겹침 (5일째)",
+      "#13 쓴템 표시가 목록에서 사라짐 (3일째)",
+      "PR #14 열린 지 4일째, draft 아님",
+      "이번 기간 커밋 21건 (작성자 1명)",
+      "병합된 PR 3건"
+    ],
+    "source": [
+      "get_dev_activity · open_issues",
+      "get_dev_activity · pull_requests",
+      "get_dev_activity · summary"
+    ]
+  }
+}

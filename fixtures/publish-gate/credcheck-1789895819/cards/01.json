@@ -1,0 +1,30 @@
+{
+  "card_no": 1,
+  "kind": "cover",
+  "title": "이번 주 「이미 있어」, 운영 브리핑",
+  "body": [
+    "기간: 2026-09-02 ~ 2026-09-09 (KST)",
+    "※ 요청 기간(9/13~9/20) 대신 도구가 반환한 실제 기간",
+    "배포 3건 · 앱 오류 6건 · 신규가입 17명"
+  ],
+  "sources": [
+    "get_system_health · period (실제 반환 기간, 요청 기간과 다름)",
+    "get_user_metrics · period"
+  ],
+  "accent": "accent",
+  "layers": {
+    "title": [
+      "이번 주 「이미 있어」, 운영 브리핑"
+    ],
+    "body": [
+      "기간: 2026-09-02 ~ 2026-09-09 (KST)",
+      "※ 요청 기간(9/13~9/20) 대신 도구가 반환한",
+      "실제 기간",
+      "배포 3건 · 앱 오류 6건 · 신규가입 17명"
+    ],
+    "source": [
+      "get_system_health · period (실제 반환 기간, 요청 기간과 다름)",
+      "get_user_metrics · period"
+    ]
+  }
+}

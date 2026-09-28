@@ -1,0 +1,39 @@
+{
+  "card_no": 2,
+  "kind": "text",
+  "title": "09-05 배포 실패\n타입 에러로 중단\n75분 만에 복구",
+  "body": [
+    "18:05 dpl_b2 빌드 실패",
+    "원인: OwnedItem에 used_up_at 없음",
+    "app/items/[id]/page.tsx:42",
+    "19:20 dpl_b3로 복구 완료",
+    "이번 주 배포 3건 중 1건 실패",
+    "7일간 함수 오류 47건 (비교 데이터 없음)"
+  ],
+  "sources": [
+    "get_system_health · deployments[dpl_b2].build_error",
+    "get_system_health · deployments[dpl_b3]",
+    "get_system_health · function_errors.count"
+  ],
+  "accent": "bad",
+  "layers": {
+    "title": [
+      "09-05 배포 실패",
+      "타입 에러로 중단",
+      "75분 만에 복구"
+    ],
+    "body": [
+      "18:05 dpl_b2 빌드 실패",
+      "원인: OwnedItem에 used_up_at 없음",
+      "app/items/[id]/page.tsx:42",
+      "19:20 dpl_b3로 복구 완료",
+      "이번 주 배포 3건 중 1건 실패",
+      "7일간 함수 오류 47건 (비교 데이터 없음)"
+    ],
+    "source": [
+      "get_system_health · deployments[dpl_b2].build_error",
+      "get_system_health · deployments[dpl_b3]",
+      "get_system_health · function_errors.count"
+    ]
+  }
+}

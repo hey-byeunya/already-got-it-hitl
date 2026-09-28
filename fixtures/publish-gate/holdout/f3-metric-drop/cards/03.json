@@ -1,0 +1,30 @@
+{
+  "card_no": 3,
+  "kind": "text",
+  "title": "배포 현황 — 이상 없음",
+  "body": [
+    "이번 주 배포 1건 (dpl_c1, 09-04)",
+    "상태 READY, build_error 없음",
+    "실패 배포 0건"
+  ],
+  "sources": [
+    "get_system_health · deployments[].state (READY)",
+    "get_system_health · summary.error (0건)"
+  ],
+  "accent": "accent",
+  "category": "fyi",
+  "layers": {
+    "title": [
+      "배포 현황 — 이상 없음"
+    ],
+    "body": [
+      "이번 주 배포 1건 (dpl_c1, 09-04)",
+      "상태 READY, build_error 없음",
+      "실패 배포 0건"
+    ],
+    "source": [
+      "get_system_health · deployments[].state (READY)",
+      "get_system_health · summary.error (0건)"
+    ]
+  }
+}

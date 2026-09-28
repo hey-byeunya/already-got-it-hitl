@@ -1,0 +1,32 @@
+{
+  "card_no": 5,
+  "kind": "metric",
+  "title": "앱 오류, 전주 대비 6배",
+  "body": [
+    "일별 오류: 09-05 4건, 09-06 2건, 나머지 0건",
+    "이번 기간 총 6건, 전주 1건 대비 6배",
+    "signups·active_users·owned_created는 전주 대비 소폭 감소"
+  ],
+  "sources": [
+    "get_user_metrics · series[].errors",
+    "get_user_metrics · totals.errors_total (전주 대비, previous_period_totals.errors_total)"
+  ],
+  "chart_path": "charts/05.svg",
+  "accent": "warn",
+  "layers": {
+    "title": [
+      "앱 오류, 전주 대비 6배"
+    ],
+    "body": [
+      "일별 오류: 09-05 4건, 09-06 2건, 나머지 0건",
+      "이번 기간 총 6건, 전주 1건 대비 6배",
+      "signups·active_users·owned_created는 전주 대비",
+      "소폭 감소"
+    ],
+    "source": [
+      "get_user_metrics · series[].errors",
+      "get_user_metrics · totals.errors_total (전주 대비,",
+      "previous_period_totals.errors_total)"
+    ]
+  }
+}

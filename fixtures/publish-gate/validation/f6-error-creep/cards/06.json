@@ -1,0 +1,34 @@
+{
+  "card_no": 6,
+  "kind": "text",
+  "title": "알아둘 것: 개발 활동 안정적",
+  "body": [
+    "열린 이슈 1건 (#15, 2일 전 등록)",
+    "진행 중 PR 1건 (#14, 4일째)",
+    "커밋 21건 · 병합 3건",
+    "정체 신호 없음"
+  ],
+  "sources": [
+    "get_dev_activity · open_issues (#15)",
+    "get_dev_activity · pull_requests (#14)",
+    "get_dev_activity · commits.count(21)/summary.merged_this_period(3)"
+  ],
+  "accent": "accent",
+  "category": "fyi",
+  "layers": {
+    "title": [
+      "알아둘 것: 개발 활동 안정적"
+    ],
+    "body": [
+      "열린 이슈 1건 (#15, 2일 전 등록)",
+      "진행 중 PR 1건 (#14, 4일째)",
+      "커밋 21건 · 병합 3건",
+      "정체 신호 없음"
+    ],
+    "source": [
+      "get_dev_activity · open_issues (#15)",
+      "get_dev_activity · pull_requests (#14)",
+      "get_dev_activity · commits.count(21)/summary.merged_this_period(3)"
+    ]
+  }
+}

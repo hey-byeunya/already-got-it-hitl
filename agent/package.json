@@ -1,0 +1,50 @@
+{
+  "name": "already-got-it-ops-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "운영 브리핑 에이전트의 루프 래퍼 — Claude Agent SDK 호출부를 화면에서 분리한다",
+  "scripts": {
+    "build": "tsc",
+    "check": "node --test \"dist/test/*.test.js\"",
+    "gate-compare": "node scripts/gate-compare.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "*",
+    "already-got-it-ops-mcp": "file:../mcp-server"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/src/engine.d.ts",
+      "default": "./dist/src/engine.js"
+    },
+    "./engine": {
+      "types": "./dist/src/engine.d.ts",
+      "default": "./dist/src/engine.js"
+    },
+    "./gate": {
+      "types": "./dist/src/gate.d.ts",
+      "default": "./dist/src/gate.js"
+    },
+    "./limits": {
+      "types": "./dist/src/limits.d.ts",
+      "default": "./dist/src/limits.js"
+    },
+    "./tools": {
+      "types": "./dist/src/tools.d.ts",
+      "default": "./dist/src/tools.js"
+    },
+    "./env": {
+      "types": "./dist/src/env.d.ts",
+      "default": "./dist/src/env.js"
+    },
+    "./publish": {
+      "types": "./dist/src/publish.d.ts",
+      "default": "./dist/src/publish.js"
+    }
+  }
+}

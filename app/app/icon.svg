@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!--
+    운영 브리핑. 이 앱의 서명은 ASCII 게이지(████░░░░)다 —
+    길이가 다른 막대 셋이면 16px 에서도 «수치를 읽어 낸 보고» 로 읽힌다.
+    색은 globals.css 의 panel · accent · bar-empty 토큰과 같은 값이다.
+    여백을 좁게 잡는다. 탭에서는 16px 로 줄어들어 한 칸이 아깝다.
+  -->
+  <rect width="64" height="64" fill="#0a0d0c"/>
+  <!-- 타이틀 바 -->
+  <rect x="0" y="0" width="64" height="5" fill="#4ee08a"/>
+
+  <!-- 게이지 석 줄. 채운 칸과 빈 칸을 나눠 그린다 - 화면의 Bar 와 같은 규칙이다. -->
+  <rect x="8" y="16" width="48" height="9" fill="#233029"/>
+  <rect x="8" y="16" width="33" height="9" fill="#4ee08a"/>
+
+  <rect x="8" y="29" width="48" height="9" fill="#233029"/>
+  <rect x="8" y="29" width="18" height="9" fill="#4ee08a"/>
+
+  <rect x="8" y="42" width="48" height="9" fill="#233029"/>
+  <rect x="8" y="42" width="43" height="9" fill="#4ee08a"/>
+</svg>

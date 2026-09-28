@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "already-got-it-ops": {
+      "command": "node",
+      "args": ["mcp-server/dist/src/index.js"],
+      "env": {
+        "OPS_MODE": "fixture",
+        "OPS_FIXTURE_ID": "f2-deploy-fail",
+        "OPS_RUNS_DIR": "runs",
+        "OPS_FIXTURES_DIR": "fixtures/snapshots",
+        "GITHUB_ALLOWED_REPOS": "hey-byeunya/already-got-it"
+      }
+    }
+  }
+}

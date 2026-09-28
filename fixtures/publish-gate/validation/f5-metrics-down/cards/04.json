@@ -1,0 +1,34 @@
+{
+  "card_no": 4,
+  "kind": "metric",
+  "title": "배포 2건 모두 성공",
+  "body": [
+    "dpl_a1 2026-09-03 commit 3f9c2ab — READY",
+    "dpl_a2 2026-09-06 commit 7d1e4bb — READY",
+    "빌드 오류 0건",
+    "응답에 url·commit_url 필드가 없어 링크는 이름만 남김"
+  ],
+  "sources": [
+    "get_system_health · deployments (dpl_a1, dpl_a2)",
+    "get_system_health · summary"
+  ],
+  "chart_path": "charts/04.svg",
+  "accent": "accent",
+  "category": "fyi",
+  "layers": {
+    "title": [
+      "배포 2건 모두 성공"
+    ],
+    "body": [
+      "dpl_a1 2026-09-03 commit 3f9c2ab — READY",
+      "dpl_a2 2026-09-06 commit 7d1e4bb — READY",
+      "빌드 오류 0건",
+      "응답에 url·commit_url 필드가 없어 링크는 이름만",
+      "남김"
+    ],
+    "source": [
+      "get_system_health · deployments (dpl_a1, dpl_a2)",
+      "get_system_health · summary"
+    ]
+  }
+}

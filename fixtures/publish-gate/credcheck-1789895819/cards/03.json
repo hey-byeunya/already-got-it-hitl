@@ -1,0 +1,28 @@
+{
+  "card_no": 3,
+  "kind": "metric",
+  "title": "오류가 몰린 라우트",
+  "body": [
+    "/items/[id] 4건, /api/owned 2건",
+    "이번 기간 앱 오류 6건 중 대부분",
+    "앞 카드의 배포 실패 파일과 같은 라우트"
+  ],
+  "sources": [
+    "get_user_metrics · errors_by_route[].count"
+  ],
+  "chart_path": "charts/03.svg",
+  "accent": "bad",
+  "layers": {
+    "title": [
+      "오류가 몰린 라우트"
+    ],
+    "body": [
+      "/items/[id] 4건, /api/owned 2건",
+      "이번 기간 앱 오류 6건 중 대부분",
+      "앞 카드의 배포 실패 파일과 같은 라우트"
+    ],
+    "source": [
+      "get_user_metrics · errors_by_route[].count"
+    ]
+  }
+}

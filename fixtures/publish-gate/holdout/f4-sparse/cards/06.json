@@ -1,0 +1,31 @@
+{
+  "card_no": 6,
+  "kind": "text",
+  "title": "의존성 트렌드: 특이사항 없음",
+  "body": [
+    "next/react/supabase/tailwind/typescript/vitest 검색",
+    "관련 릴리스·보안 소식 검색 결과 0건",
+    "이번 주 해당사항 없음"
+  ],
+  "sources": [
+    "web_search · results (Next.js 16.2 관련, 0건)",
+    "web_search · results (supabase/tailwind/react/vitest 관련, 0건)"
+  ],
+  "accent": "accent",
+  "category": "fyi",
+  "layers": {
+    "title": [
+      "의존성 트렌드: 특이사항 없음"
+    ],
+    "body": [
+      "next/react/supabase/tailwind/typescript/vitest",
+      "검색",
+      "관련 릴리스·보안 소식 검색 결과 0건",
+      "이번 주 해당사항 없음"
+    ],
+    "source": [
+      "web_search · results (Next.js 16.2 관련, 0건)",
+      "web_search · results (supabase/tailwind/react/vitest 관련, 0건)"
+    ]
+  }
+}

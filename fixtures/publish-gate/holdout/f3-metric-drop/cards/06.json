@@ -1,0 +1,31 @@
+{
+  "card_no": 6,
+  "kind": "text",
+  "title": "의존성 트렌드 — 해당 소식 없음",
+  "body": [
+    "next·react·supabase·tailwind 등 검색함",
+    "이 앱에 해당하는 릴리스·보안 소식 없음",
+    "검색 결과는 전부 무관한 내용 (게시일 미확인)"
+  ],
+  "sources": [
+    "web_search · results[].title (next 16.2 검색, 무관 결과)",
+    "web_search · results[].url (거든 4번 검색 동일 무관 결과)"
+  ],
+  "accent": "accent",
+  "category": "fyi",
+  "layers": {
+    "title": [
+      "의존성 트렌드 — 해당 소식",
+      "없음"
+    ],
+    "body": [
+      "next·react·supabase·tailwind 등 검색함",
+      "이 앱에 해당하는 릴리스·보안 소식 없음",
+      "검색 결과는 전부 무관한 내용 (게시일 미확인)"
+    ],
+    "source": [
+      "web_search · results[].title (next 16.2 검색, 무관 결과)",
+      "web_search · results[].url (거든 4번 검색 동일 무관 결과)"
+    ]
+  }
+}

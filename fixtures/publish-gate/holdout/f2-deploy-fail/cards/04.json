@@ -1,0 +1,38 @@
+{
+  "card_no": 4,
+  "kind": "metric",
+  "title": "활성 사용자 지난주보다 소폭 감소",
+  "body": [
+    "활성 41명(전주 43) · 가입 17(전주 18)",
+    "있템 185(전주 195) · 위시 60(전주 63)",
+    "9/5만 9명으로 급락(평소 16~20명)",
+    "배포 실패와 같은 날, 원인 단정 못 함",
+    "세션 로그 등 추가 확인 필요"
+  ],
+  "sources": [
+    "get_user_metrics · totals (금주)",
+    "get_user_metrics · previous_period_totals (전주 비교)",
+    "get_user_metrics · series[].active_users (9/5)"
+  ],
+  "chart_path": "charts/04.svg",
+  "accent": "warn",
+  "category": "watch",
+  "layers": {
+    "title": [
+      "활성 사용자 지난주보다 소폭",
+      "감소"
+    ],
+    "body": [
+      "활성 41명(전주 43) · 가입 17(전주 18)",
+      "있템 185(전주 195) · 위시 60(전주 63)",
+      "9/5만 9명으로 급락(평소 16~20명)",
+      "배포 실패와 같은 날, 원인 단정 못 함",
+      "세션 로그 등 추가 확인 필요"
+    ],
+    "source": [
+      "get_user_metrics · totals (금주)",
+      "get_user_metrics · previous_period_totals (전주 비교)",
+      "get_user_metrics · series[].active_users (9/5)"
+    ]
+  }
+}

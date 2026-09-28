@@ -1,0 +1,32 @@
+{
+  "card_no": 5,
+  "kind": "text",
+  "title": "알아둘 것: Next.js 16.2.12 패치",
+  "body": [
+    "09.05 릴리즈, App Router 버그 수정 위주",
+    "이 앱이 쓰는 next 16.2.x 계열",
+    "보안 권고는 아니고 일반 패치 릴리즈",
+    "게시일 확인됨 (2026-09-05)"
+  ],
+  "sources": [
+    "web_search · results[0].title (Next.js 16.2.12 released, published_at 2026-09-05)"
+  ],
+  "accent": "accent",
+  "category": "fyi",
+  "layers": {
+    "title": [
+      "알아둘 것: Next.js 16.2.12",
+      "패치"
+    ],
+    "body": [
+      "09.05 릴리즈, App Router 버그 수정 위주",
+      "이 앱이 쓰는 next 16.2.x 계열",
+      "보안 권고는 아니고 일반 패치 릴리즈",
+      "게시일 확인됨 (2026-09-05)"
+    ],
+    "source": [
+      "web_search · results[0].title (Next.js 16.2.12 released, published_at",
+      "2026-09-05)"
+    ]
+  }
+}

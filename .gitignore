@@ -1,0 +1,13 @@
+node_modules/
+.next/
+.env
+.env.local
+.env*.local
+/runs/
+*.log
+.DS_Store
+docs/
+
+# Finder 실행용 런처. 안에 이 컴퓨터의 절대경로(REPO·nvm node)가 박혀 있어
+# 다른 컴퓨터에서는 그대로 못 쓴다. 각자 만드는 게 맞다.
+*.app/

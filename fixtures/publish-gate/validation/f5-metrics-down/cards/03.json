@@ -1,0 +1,29 @@
+{
+  "card_no": 3,
+  "kind": "metric",
+  "title": "함수 오류 3건 (7일)",
+  "body": [
+    "이전 기간 비교값이 없어 늘었는지는 판단 못 함",
+    "route별 내역은 errors_by_route 미회수로 못 봈",
+    "다음 주 비교 기준으로 추이 지켜볼 것"
+  ],
+  "sources": [
+    "get_system_health · function_errors.count"
+  ],
+  "chart_path": "charts/03.svg",
+  "accent": "warn",
+  "category": "watch",
+  "layers": {
+    "title": [
+      "함수 오류 3건 (7일)"
+    ],
+    "body": [
+      "이전 기간 비교값이 없어 늘었는지는 판단 못 함",
+      "route별 내역은 errors_by_route 미회수로 못 봈",
+      "다음 주 비교 기준으로 추이 지켜볼 것"
+    ],
+    "source": [
+      "get_system_health · function_errors.count"
+    ]
+  }
+}

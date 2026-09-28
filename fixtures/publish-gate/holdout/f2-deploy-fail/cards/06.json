@@ -1,0 +1,34 @@
+{
+  "card_no": 6,
+  "kind": "text",
+  "title": "Supabase JS v2.111 — 타입 RPC 헬퍼",
+  "body": [
+    "@supabase/supabase-js v2.111 changelog",
+    "타입 RPC 헬퍼 추가, breaking change 없음",
+    "게시일 2026-09-07",
+    "이 앱 의존성 해당 — 적용 검토 가능",
+    "출처 URL이 example.invalid 형식 — 실접근 확인 못 함"
+  ],
+  "sources": [
+    "web_search · results[0].snippet (Supabase JS v2.111, 2026-09-07 게시)"
+  ],
+  "accent": "accent",
+  "category": "fyi",
+  "layers": {
+    "title": [
+      "Supabase JS v2.111 — 타입",
+      "RPC 헬퍼"
+    ],
+    "body": [
+      "@supabase/supabase-js v2.111 changelog",
+      "타입 RPC 헬퍼 추가, breaking change 없음",
+      "게시일 2026-09-07",
+      "이 앱 의존성 해당 — 적용 검토 가능",
+      "출처 URL이 example.invalid 형식 — 실접근 확인 못",
+      "함"
+    ],
+    "source": [
+      "web_search · results[0].snippet (Supabase JS v2.111, 2026-09-07 게시)"
+    ]
+  }
+}

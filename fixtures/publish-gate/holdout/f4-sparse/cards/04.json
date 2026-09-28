@@ -1,0 +1,30 @@
+{
+  "card_no": 4,
+  "kind": "text",
+  "title": "시스템 상태: 배포 0건",
+  "body": [
+    "배포 0건 (확인된 사실)",
+    "함수 에러 수 확인 못함 (unavailable)",
+    "대시보드 직접 확인 권장"
+  ],
+  "sources": [
+    "get_system_health · summary.total",
+    "get_system_health · unavailable_fields (function_errors.count)"
+  ],
+  "accent": "warn",
+  "category": "watch",
+  "layers": {
+    "title": [
+      "시스템 상태: 배포 0건"
+    ],
+    "body": [
+      "배포 0건 (확인된 사실)",
+      "함수 에러 수 확인 못함 (unavailable)",
+      "대시보드 직접 확인 권장"
+    ],
+    "source": [
+      "get_system_health · summary.total",
+      "get_system_health · unavailable_fields (function_errors.count)"
+    ]
+  }
+}

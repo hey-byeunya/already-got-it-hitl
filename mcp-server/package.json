@@ -1,0 +1,49 @@
+{
+  "name": "already-got-it-ops-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "「이미 있어」 운영 브리핑 에이전트의 도메인 도구 MCP 서버",
+  "bin": {
+    "already-got-it-ops-mcp": "./dist/src/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/src/index.js",
+    "check": "node --test \"dist/test/*.test.js\"",
+    "smoke": "node scripts/smoke.mjs",
+    "verify": "npm run build && npm run check && npm run smoke",
+    "smoke-live": "node scripts/smoke-live.mjs",
+    "generate-cover": "node scripts/generate-cover.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.0.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/src/index.js"
+    },
+    "./approvals": {
+      "types": "./dist/src/approvals.d.ts",
+      "default": "./dist/src/approvals.js"
+    },
+    "./config": {
+      "types": "./dist/src/config.d.ts",
+      "default": "./dist/src/config.js"
+    },
+    "./cards": {
+      "types": "./dist/src/cards.d.ts",
+      "default": "./dist/src/cards.js"
+    },
+    "./errors": {
+      "types": "./dist/src/errors.d.ts",
+      "default": "./dist/src/errors.js"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "card_no": 5,
+  "kind": "text",
+  "title": "알아둘 것: Supabase JS v2.111",
+  "body": [
+    "@supabase/supabase-js v2.111 체인지로그",
+    "타입 RPC 헬퍼 추가",
+    "브레이킹 체인지 없음 (원문 기준)",
+    "게시일 2026-09-07 확인됨",
+    "적용 여부는 별도 검토 필요"
+  ],
+  "sources": [
+    "web_search · results[0].title (Supabase JS v2.111 changelog, 게시일 2026-09-07)",
+    "web_search · results[0].snippet (타입 RPC 헬퍼 추가, 변경 없음)"
+  ],
+  "accent": "accent",
+  "category": "fyi",
+  "layers": {
+    "title": [
+      "알아둘 것: Supabase JS v2.111"
+    ],
+    "body": [
+      "@supabase/supabase-js v2.111 체인지로그",
+      "타입 RPC 헬퍼 추가",
+      "브레이킹 체인지 없음 (원문 기준)",
+      "게시일 2026-09-07 확인됨",
+      "적용 여부는 별도 검토 필요"
+    ],
+    "source": [
+      "web_search · results[0].title (Supabase JS v2.111 changelog, 게시일",
+      "2026-09-07)",
+      "web_search · results[0].snippet (타입 RPC 헬퍼 추가, 변경 없음)"
+    ]
+  }
+}

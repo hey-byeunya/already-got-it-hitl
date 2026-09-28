@@ -1,0 +1,34 @@
+{
+  "card_no": 4,
+  "kind": "metric",
+  "title": "9/5 활동 급감, 원인 미확인",
+  "body": [
+    "9/5 active_users 9명 (평소 16~20)",
+    "같은 날 owned_created 12, wish_created 3도 최저",
+    "같은 날 배포 실패와 시간 겹침",
+    "인과관계는 이 데이터로 확인 불가"
+  ],
+  "sources": [
+    "get_user_metrics · series[].active_users",
+    "get_user_metrics · series[].owned_created",
+    "get_user_metrics · series[].wish_created"
+  ],
+  "chart_path": "charts/04.svg",
+  "accent": "warn",
+  "layers": {
+    "title": [
+      "9/5 활동 급감, 원인 미확인"
+    ],
+    "body": [
+      "9/5 active_users 9명 (평소 16~20)",
+      "같은 날 owned_created 12, wish_created 3도 최저",
+      "같은 날 배포 실패와 시간 겹침",
+      "인과관계는 이 데이터로 확인 불가"
+    ],
+    "source": [
+      "get_user_metrics · series[].active_users",
+      "get_user_metrics · series[].owned_created",
+      "get_user_metrics · series[].wish_created"
+    ]
+  }
+}

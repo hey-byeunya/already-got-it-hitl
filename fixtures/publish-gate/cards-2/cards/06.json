@@ -1,0 +1,31 @@
+{
+  "card_no": 6,
+  "kind": "text",
+  "title": "@supabase/supabase-js\nv2.111 릴리스",
+  "body": [
+    "타입 RPC 헬퍼 추가",
+    "브레이킹 체인지 없음 (확인한 사실)",
+    "게시일 2026-09-07",
+    "즉시 조치 불필요, 다음 정기 업데이트 시 반영 검토"
+  ],
+  "sources": [
+    "web_search · 'supabase-js security advisory 2026' 결과 (Supabase JS v2.111 changelog)"
+  ],
+  "accent": "accent",
+  "layers": {
+    "title": [
+      "@supabase/supabase-js",
+      "v2.111 릴리스"
+    ],
+    "body": [
+      "타입 RPC 헬퍼 추가",
+      "브레이킹 체인지 없음 (확인한 사실)",
+      "게시일 2026-09-07",
+      "즉시 조치 불필요, 다음 정기 업데이트 시 반영 검토"
+    ],
+    "source": [
+      "web_search · 'supabase-js security advisory 2026' 결과 (Supabase JS v2.111",
+      "changelog)"
+    ]
+  }
+}

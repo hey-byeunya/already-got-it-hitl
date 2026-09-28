@@ -1,0 +1,187 @@
+{
+  "id": "f6-error-creep",
+  "label": "배포는 전부 성공 — 앱 에러만 전주 2건 → 9건",
+  "as_of": "2026-09-09T09:00:00+09:00",
+  "period": {
+    "since": "2026-09-02T00:00:00+09:00",
+    "until": "2026-09-09T00:00:00+09:00",
+    "tz": "Asia/Seoul"
+  },
+  "get_system_health": {
+    "period": {
+      "since": "2026-09-02T00:00:00+09:00",
+      "until": "2026-09-09T00:00:00+09:00",
+      "tz": "Asia/Seoul"
+    },
+    "deployments": [
+      {
+        "id": "dpl_b1",
+        "created_at": "2026-09-03T09:30:00+09:00",
+        "state": "READY",
+        "target": "production",
+        "commit_sha": "11aa22b",
+        "build_error": null
+      },
+      {
+        "id": "dpl_b3",
+        "created_at": "2026-09-05T19:20:00+09:00",
+        "state": "READY",
+        "target": "production",
+        "commit_sha": "66ee77f",
+        "build_error": null
+      }
+    ],
+    "summary": {
+      "total": 2,
+      "ready": 2,
+      "error": 0
+    },
+    "function_errors": {
+      "count": 47,
+      "window": "7d",
+      "available": true
+    },
+    "unavailable_fields": []
+  },
+  "get_user_metrics": {
+    "period": {
+      "since": "2026-09-02",
+      "until": "2026-09-09"
+    },
+    "series": [
+      {
+        "date": "2026-09-02",
+        "signups": 3,
+        "owned_created": 33,
+        "wish_created": 10,
+        "active_users": 19,
+        "errors": 0
+      },
+      {
+        "date": "2026-09-03",
+        "signups": 2,
+        "owned_created": 30,
+        "wish_created": 9,
+        "active_users": 18,
+        "errors": 1
+      },
+      {
+        "date": "2026-09-04",
+        "signups": 3,
+        "owned_created": 27,
+        "wish_created": 11,
+        "active_users": 20,
+        "errors": 1
+      },
+      {
+        "date": "2026-09-05",
+        "signups": 1,
+        "owned_created": 12,
+        "wish_created": 3,
+        "active_users": 9,
+        "errors": 2
+      },
+      {
+        "date": "2026-09-06",
+        "signups": 3,
+        "owned_created": 31,
+        "wish_created": 10,
+        "active_users": 19,
+        "errors": 1
+      },
+      {
+        "date": "2026-09-07",
+        "signups": 2,
+        "owned_created": 24,
+        "wish_created": 8,
+        "active_users": 16,
+        "errors": 2
+      },
+      {
+        "date": "2026-09-08",
+        "signups": 3,
+        "owned_created": 28,
+        "wish_created": 9,
+        "active_users": 18,
+        "errors": 2
+      }
+    ],
+    "totals": {
+      "signups": 17,
+      "owned_created": 185,
+      "wish_created": 60,
+      "active_users": 41,
+      "errors_total": 9
+    },
+    "previous_period_totals": {
+      "signups": 18,
+      "owned_created": 195,
+      "wish_created": 63,
+      "active_users": 43,
+      "errors_total": 2
+    },
+    "errors_by_route": [
+      {
+        "route": "/wish",
+        "count": 6
+      },
+      {
+        "route": "/api/wish",
+        "count": 3
+      }
+    ]
+  },
+  "get_dev_activity": {
+    "open_issues": [
+      {
+        "number": 15,
+        "title": "위시 목록 무한 스크롤 개선",
+        "created_at": "2026-09-07T09:00:00+09:00",
+        "age_days": 2,
+        "labels": [
+          "enhancement"
+        ]
+      }
+    ],
+    "commits": {
+      "count": 21,
+      "authors": 1
+    },
+    "pull_requests": [
+      {
+        "number": 14,
+        "state": "open",
+        "age_days": 4,
+        "draft": false
+      }
+    ],
+    "summary": {
+      "open_issue_count": 1,
+      "oldest_open_issue_days": 2,
+      "merged_this_period": 3
+    }
+  },
+  "web_search": {
+    "results": [
+      {
+        "title": "Supabase JS v2.111 changelog",
+        "url": "https://example.invalid/supabase-2-111",
+        "snippet": "Adds typed RPC helpers. No breaking changes.",
+        "published_at": "2026-09-07"
+      }
+    ]
+  },
+  "expected": {
+    "top_signal": "배포는 정상인데 앱 에러가 2건에서 9건으로 늘었다 — /wish 에 몰림",
+    "must_include": [
+      "앱 에러 9건 (전주 2건)",
+      "/wish 6건 · /api/wish 3건",
+      "배포는 모두 성공"
+    ],
+    "must_not_claim": [
+      "배포가 에러의 원인이라는 서술"
+    ],
+    "notes": "에러 증가만 있는 주. errors_up 하나만 걸린다."
+  },
+  "_origin": "HITL 검증용(2026-09-28). 발행 게이트 기준(D43)을 아는 사람이 만든 경계 사례다 — 이 편향은 REPORT 에 밝힌다."
+}

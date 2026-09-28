@@ -1,0 +1,33 @@
+{
+  "card_no": 2,
+  "kind": "metric",
+  "title": "사용자 활동 지표",
+  "body": [
+    "가입 1 · 있템등록 8 · 위시등록 1 · 활성 5 (기간 합계)",
+    "09-04~09-08 일별 데이터 결측",
+    "전주 대비 비교 불가(previous_period_totals null)"
+  ],
+  "sources": [
+    "get_user_metrics · totals",
+    "get_user_metrics · unavailable_fields (series[2026-09-04..2026-09-08], previous_period_totals)"
+  ],
+  "chart_path": "charts/02.svg",
+  "accent": "warn",
+  "category": "watch",
+  "layers": {
+    "title": [
+      "사용자 활동 지표"
+    ],
+    "body": [
+      "가입 1 · 있템등록 8 · 위시등록 1 · 활성 5 (기간",
+      "합계)",
+      "09-04~09-08 일별 데이터 결측",
+      "전주 대비 비교 불가(previous_period_totals null)"
+    ],
+    "source": [
+      "get_user_metrics · totals",
+      "get_user_metrics · unavailable_fields (series[2026-09-04..2026-09-08],",
+      "previous_period_totals)"
+    ]
+  }
+}

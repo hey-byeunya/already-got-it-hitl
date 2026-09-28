@@ -1,0 +1,37 @@
+{
+  "card_no": 3,
+  "kind": "metric",
+  "title": "지켜볼 것: 활성 지표 소폭 하락",
+  "body": [
+    "활성 사용자 41명, 전주 43명",
+    "신규 가입 17명, 전주 18명",
+    "있템·위시 등록도 소폭 감소",
+    "9/5 활성 9명으로 급감 — 원인 불명",
+    "배포 시점과 겹친다고 원인 단정 불가"
+  ],
+  "sources": [
+    "get_user_metrics · totals.active_users (41, 전주 43)",
+    "get_user_metrics · totals.signups (17, 전주 18)",
+    "get_user_metrics · series[].active_users (9/5=9)"
+  ],
+  "chart_path": "charts/03.svg",
+  "accent": "warn",
+  "category": "watch",
+  "layers": {
+    "title": [
+      "지켜볼 것: 활성 지표 소폭 하락"
+    ],
+    "body": [
+      "활성 사용자 41명, 전주 43명",
+      "신규 가입 17명, 전주 18명",
+      "있템·위시 등록도 소폭 감소",
+      "9/5 활성 9명으로 급감 — 원인 불명",
+      "배포 시점과 겹친다고 원인 단정 불가"
+    ],
+    "source": [
+      "get_user_metrics · totals.active_users (41, 전주 43)",
+      "get_user_metrics · totals.signups (17, 전주 18)",
+      "get_user_metrics · series[].active_users (9/5=9)"
+    ]
+  }
+}

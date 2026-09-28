@@ -1,0 +1,32 @@
+{
+  "card_no": 7,
+  "kind": "text",
+  "title": "supabase-js 업데이트, 영향 없음",
+  "body": [
+    "@supabase/supabase-js v2.111 릴리스 (2026-09-07)",
+    "타입 RPC 헬퍼 추가, 브레이킹 체인지 없음",
+    "next/react/tailwind/typescript/vitest 소식은 확인 못 함",
+    "쿼리를 바꿔도 검색 결과가 동일 — 추가 확인 권장 (추정)"
+  ],
+  "sources": [
+    "web_search · results[0].title (Supabase JS v2.111, 게시일 2026-09-07)"
+  ],
+  "accent": "accent",
+  "layers": {
+    "title": [
+      "supabase-js 업데이트, 영향",
+      "없음"
+    ],
+    "body": [
+      "@supabase/supabase-js v2.111 릴리스 (2026-09-07)",
+      "타입 RPC 헬퍼 추가, 브레이킹 체인지 없음",
+      "next/react/tailwind/typescript/vitest 소식은",
+      "확인 못 함",
+      "쿼리를 바꿔도 검색 결과가 동일 — 추가 확인 권장",
+      "(추정)"
+    ],
+    "source": [
+      "web_search · results[0].title (Supabase JS v2.111, 게시일 2026-09-07)"
+    ]
+  }
+}

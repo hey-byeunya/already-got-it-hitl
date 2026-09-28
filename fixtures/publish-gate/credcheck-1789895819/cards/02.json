@@ -1,0 +1,40 @@
+{
+  "card_no": 2,
+  "kind": "text",
+  "title": "배포 실패 원인 확인 필요",
+  "body": [
+    "09-05 18:05 배포(dpl_b2) 실패",
+    "TS 타입 에러: OwnedItem에 used_up_at 없음",
+    "app/items/[id]/page.tsx:42",
+    "34분 뒤 dpl_b3로 정상 배포됨",
+    "같은 기간 앱 오류 6건 중 4건이 /items/[id] 라우트",
+    "타입 에러와 라우트 집중이 같은 파일 — 코드 점검 권장 (추정)",
+    "커밋: 44cc55d → 66ee77f (url 필드 없음)"
+  ],
+  "sources": [
+    "get_system_health · deployments[1].build_error",
+    "get_system_health · deployments[1].commit_sha",
+    "get_user_metrics · errors_by_route (/items/[id] 4건)"
+  ],
+  "accent": "bad",
+  "layers": {
+    "title": [
+      "배포 실패 원인 확인 필요"
+    ],
+    "body": [
+      "09-05 18:05 배포(dpl_b2) 실패",
+      "TS 타입 에러: OwnedItem에 used_up_at 없음",
+      "app/items/[id]/page.tsx:42",
+      "34분 뒤 dpl_b3로 정상 배포됨",
+      "같은 기간 앱 오류 6건 중 4건이 /items/[id] 라우트",
+      "타입 에러와 라우트 집중이 같은 파일 — 코드 점검",
+      "권장 (추정)",
+      "커밋: 44cc55d → 66ee77f (url 필드 없음)"
+    ],
+    "source": [
+      "get_system_health · deployments[1].build_error",
+      "get_system_health · deployments[1].commit_sha",
+      "get_user_metrics · errors_by_route (/items/[id] 4건)"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "card_no": 4,
+  "kind": "text",
+  "title": "주간 합계\n지난주 대비 소폭 감소",
+  "body": [
+    "가입 17명 (지난주 18명)",
+    "활성 사용자 41명 (지난주 43명)",
+    "있템 등록 185건 (지난주 195건)",
+    "위시 등록 60건 (지난주 63건)",
+    "네 지표 모두 소폭 감소, 원인 확인 안 됨"
+  ],
+  "sources": [
+    "get_user_metrics · totals",
+    "get_user_metrics · previous_period_totals"
+  ],
+  "accent": "warn",
+  "layers": {
+    "title": [
+      "주간 합계",
+      "지난주 대비 소폭 감소"
+    ],
+    "body": [
+      "가입 17명 (지난주 18명)",
+      "활성 사용자 41명 (지난주 43명)",
+      "있템 등록 185건 (지난주 195건)",
+      "위시 등록 60건 (지난주 63건)",
+      "네 지표 모두 소폭 감소, 원인 확인 안 됨"
+    ],
+    "source": [
+      "get_user_metrics · totals",
+      "get_user_metrics · previous_period_totals"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "card_no": 6,
+  "kind": "text",
+  "title": "알아둘 것: 이번 주 개발 활동",
+  "body": [
+    "커밋 14건 (작성자 1명)",
+    "병합된 PR 2건, 열려있는 PR 없음",
+    "열린 이슈 2건 (최장 12일째: #8 위시 정렬 옵션)",
+    "#11 모바일 필터 버그 포함 총 2건 열림"
+  ],
+  "sources": [
+    "get_dev_activity · commits (count 14, authors 1)",
+    "get_dev_activity · summary (merged_this_period 2, open_issue_count 2, oldest_open_issue_days 12)"
+  ],
+  "accent": "accent",
+  "category": "fyi",
+  "layers": {
+    "title": [
+      "알아둘 것: 이번 주 개발 활동"
+    ],
+    "body": [
+      "커밋 14건 (작성자 1명)",
+      "병합된 PR 2건, 열려있는 PR 없음",
+      "열린 이슈 2건 (최장 12일째: #8 위시 정렬 옵션)",
+      "#11 모바일 필터 버그 포함 총 2건 열림"
+    ],
+    "source": [
+      "get_dev_activity · commits (count 14, authors 1)",
+      "get_dev_activity · summary (merged_this_period 2, open_issue_count 2,",
+      "oldest_open_issue_days 12)"
+    ]
+  }
+}

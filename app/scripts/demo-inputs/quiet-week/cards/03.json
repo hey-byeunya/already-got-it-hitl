@@ -1,0 +1,32 @@
+{
+  "card_no": 3,
+  "kind": "text",
+  "title": "지켜볼 것: 함수 오류 3건",
+  "body": [
+    "최근 7일간 함수 오류 3건 확인됨",
+    "route별 세부내역은 이 도구로 확인 불가",
+    "이전 기간 비교값도 없어 증감 여부는 모름",
+    "원인은 단정하지 않음, 조사 필요",
+    "조사용 이슈 생성을 제안합니다"
+  ],
+  "sources": [
+    "get_system_health · function_errors.count (3건, 7d 윈도우)"
+  ],
+  "accent": "warn",
+  "category": "watch",
+  "layers": {
+    "title": [
+      "지켜볼 것: 함수 오류 3건"
+    ],
+    "body": [
+      "최근 7일간 함수 오류 3건 확인됨",
+      "route별 세부내역은 이 도구로 확인 불가",
+      "이전 기간 비교값도 없어 증감 여부는 모름",
+      "원인은 단정하지 않음, 조사 필요",
+      "조사용 이슈 생성을 제안합니다"
+    ],
+    "source": [
+      "get_system_health · function_errors.count (3건, 7d 윈도우)"
+    ]
+  }
+}

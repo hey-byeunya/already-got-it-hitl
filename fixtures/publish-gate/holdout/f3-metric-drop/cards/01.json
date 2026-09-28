@@ -1,0 +1,25 @@
+{
+  "card_no": 1,
+  "kind": "cover",
+  "title": "이번 주 「이미 있어」, 운영 브리핑",
+  "body": [
+    "기간 2026-09-02 ~ 2026-09-09",
+    "시스템 · 사용자 · 개발 활동 점검"
+  ],
+  "sources": [
+    "get_system_health · period (조회 기간 확인용)"
+  ],
+  "accent": "accent",
+  "layers": {
+    "title": [
+      "이번 주 「이미 있어」, 운영 브리핑"
+    ],
+    "body": [
+      "기간 2026-09-02 ~ 2026-09-09",
+      "시스템 · 사용자 · 개발 활동 점검"
+    ],
+    "source": [
+      "get_system_health · period (조회 기간 확인용)"
+    ]
+  }
+}

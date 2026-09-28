@@ -1,0 +1,32 @@
+{
+  "card_no": 5,
+  "kind": "metric",
+  "title": "주간 지표, 전주 대비 소폭 감소",
+  "body": [
+    "가입 17건 (전주 18)",
+    "잇템등록 185건 (전주 195)",
+    "위시등록 60건 (전주 63)",
+    "활성유저 41명 (전주 43)"
+  ],
+  "sources": [
+    "get_user_metrics · totals",
+    "get_user_metrics · previous_period_totals"
+  ],
+  "chart_path": "charts/05.svg",
+  "accent": "warn",
+  "layers": {
+    "title": [
+      "주간 지표, 전주 대비 소폭 감소"
+    ],
+    "body": [
+      "가입 17건 (전주 18)",
+      "잇템등록 185건 (전주 195)",
+      "위시등록 60건 (전주 63)",
+      "활성유저 41명 (전주 43)"
+    ],
+    "source": [
+      "get_user_metrics · totals",
+      "get_user_metrics · previous_period_totals"
+    ]
+  }
+}

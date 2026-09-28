@@ -1,0 +1,33 @@
+{
+  "card_no": 6,
+  "kind": "text",
+  "title": "개발 활동은 평이",
+  "body": [
+    "열린 버그 이슈 2건: #11(5일째), #13(3일째)",
+    "PR #14, 4일째 미병합",
+    "이번 기간 병합 3건 · 커밋 21건(작성자 1명)",
+    "정체 여부는 담당자 확인 필요 (추정)"
+  ],
+  "sources": [
+    "get_dev_activity · open_issues",
+    "get_dev_activity · pull_requests",
+    "get_dev_activity · summary.merged_this_period"
+  ],
+  "accent": "accent",
+  "layers": {
+    "title": [
+      "개발 활동은 평이"
+    ],
+    "body": [
+      "열린 버그 이슈 2건: #11(5일째), #13(3일째)",
+      "PR #14, 4일째 미병합",
+      "이번 기간 병합 3건 · 커밋 21건(작성자 1명)",
+      "정체 여부는 담당자 확인 필요 (추정)"
+    ],
+    "source": [
+      "get_dev_activity · open_issues",
+      "get_dev_activity · pull_requests",
+      "get_dev_activity · summary.merged_this_period"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "f4-sparse",
+  "label": "자료 부족 — 배포 없음, 지표 결측, API 일부 실패",
+  "as_of": "2026-09-09T09:00:00+09:00",
+  "period": { "since": "2026-09-02T00:00:00+09:00", "until": "2026-09-09T00:00:00+09:00", "tz": "Asia/Seoul" },
+
+  "get_system_health": {
+    "period": { "since": "2026-09-02T00:00:00+09:00", "until": "2026-09-09T00:00:00+09:00", "tz": "Asia/Seoul" },
+    "deployments": [],
+    "summary": { "total": 0, "ready": 0, "error": 0 },
+    "function_errors": { "count": null, "window": "7d", "available": false },
+    "unavailable_fields": ["function_errors.count"]
+  },
+
+  "get_user_metrics": {
+    "period": { "since": "2026-09-02", "until": "2026-09-09" },
+    "series": [
+      { "date": "2026-09-02", "signups": 1, "owned_created": 5, "wish_created": 1, "active_users": 4 },
+      { "date": "2026-09-03", "signups": 0, "owned_created": 3, "wish_created": 0, "active_users": 3 }
+    ],
+    "totals": { "signups": 1, "owned_created": 8, "wish_created": 1, "active_users": 5 },
+    "previous_period_totals": null,
+    "unavailable_fields": ["series[2026-09-04..2026-09-08]", "previous_period_totals"]
+  },
+
+  "get_dev_activity": {
+    "error": "rate_limited",
+    "message": "GitHub API 레이트 리밋. 재시도 가능 시각까지 18분 남음.",
+    "retry_after_seconds": 1080
+  },
+
+  "web_search": {
+    "results": []
+  },
+
+  "expected": {
+    "top_signal": "이번 기간의 자료가 부족해 브리핑을 완성할 수 없다",
+    "must_flag_unavailable": [
+      "함수 오류 수는 조회하지 못했다 (available: false)",
+      "09-04 ~ 09-08 지표가 결측이다",
+      "전주 대비 비교값이 없다 (previous_period_totals: null)",
+      "개발 활동은 레이트 리밋으로 조회하지 못했다 — 18분 후 재시도 가능",
+      "트렌드 검색 결과가 0건이다"
+    ],
+    "must_not_claim": [
+      "함수 오류가 0건이었다는 서술 — 결측을 0으로 읽은 것",
+      "09-04 ~ 09-08 에 활동이 없었다는 서술 — 데이터가 없는 것과 활동이 없는 것은 다르다",
+      "지표가 전주보다 나빠졌다/좋아졌다는 서술 — 비교값이 없다",
+      "열린 이슈 수를 언급하는 모든 서술 — 조회 자체가 실패했다"
+    ],
+    "expected_behavior": "카드를 5~8장 억지로 만들지 않는다. 확인한 사실만으로 짧게 구성하거나, 자료 부족을 알리고 재시도를 제안하며 waiting_for_user 로 남는다.",
+    "unavailable_fields": ["function_errors.count", "series[2026-09-04..2026-09-08]", "previous_period_totals", "get_dev_activity(전체)"],
+    "notes": "환각률과 결측 오독률의 핵심 픽스처. 배포 0건은 실제 0(사실)이고, 함수 오류 null 은 결측(모름)이다. 이 둘을 구별하는지가 판정 지점."
+  }
+}

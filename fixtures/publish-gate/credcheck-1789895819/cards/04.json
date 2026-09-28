@@ -1,0 +1,35 @@
+{
+  "card_no": 4,
+  "kind": "metric",
+  "title": "09-05 활성 사용자 급락",
+  "body": [
+    "09-05 active_users 9명, 주간 평균(18~20) 대비 급락",
+    "같은 날 owned_created 12건, wish_created 3건도 동반 하락",
+    "배포 실패와 시점이 곹치나 인과관계는 확인 못 함",
+    "확인 방법: 09-05 전후 에러로그·세션 대조 추가 권장"
+  ],
+  "sources": [
+    "get_user_metrics · series[].active_users",
+    "get_user_metrics · series[].owned_created",
+    "get_user_metrics · series[].wish_created"
+  ],
+  "chart_path": "charts/04.svg",
+  "accent": "warn",
+  "layers": {
+    "title": [
+      "09-05 활성 사용자 급락"
+    ],
+    "body": [
+      "09-05 active_users 9명, 주간 평균(18~20) 대비 급락",
+      "같은 날 owned_created 12건, wish_created 3건도",
+      "동반 하락",
+      "배포 실패와 시점이 곹치나 인과관계는 확인 못 함",
+      "확인 방법: 09-05 전후 에러로그·세션 대조 추가 권장"
+    ],
+    "source": [
+      "get_user_metrics · series[].active_users",
+      "get_user_metrics · series[].owned_created",
+      "get_user_metrics · series[].wish_created"
+    ]
+  }
+}

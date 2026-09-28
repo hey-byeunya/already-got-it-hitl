@@ -1,0 +1,29 @@
+{
+  "card_no": 1,
+  "kind": "cover",
+  "title": "이번 주 「이미 있어」, 운영 브리핑",
+  "body": [
+    "기간 2026-09-02 ~ 09-09",
+    "핵심: 앱 에러 증가 · 활성 지표 소폭 하락",
+    "배포는 2건 모두 성공"
+  ],
+  "sources": [
+    "get_system_health · period",
+    "get_user_metrics · period"
+  ],
+  "accent": "accent",
+  "layers": {
+    "title": [
+      "이번 주 「이미 있어」, 운영 브리핑"
+    ],
+    "body": [
+      "기간 2026-09-02 ~ 09-09",
+      "핵심: 앱 에러 증가 · 활성 지표 소폭 하락",
+      "배포는 2건 모두 성공"
+    ],
+    "source": [
+      "get_system_health · period",
+      "get_user_metrics · period"
+    ]
+  }
+}

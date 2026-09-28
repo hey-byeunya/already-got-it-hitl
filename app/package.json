@@ -1,0 +1,26 @@
+{
+  "name": "already-got-it-ops-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "운영 브리핑 에이전트의 화면 — 진행·실행 로그·질문 대기·승인·비용",
+  "scripts": {
+    "dev": "next dev -p 3010",
+    "build": "next build",
+    "start": "next start -p 3010",
+    "typecheck": "tsc --noEmit",
+    "demo:gate": "node scripts/seed-gate-demo.mjs"
+  },
+  "dependencies": {
+    "already-got-it-ops-agent": "file:../agent",
+    "already-got-it-ops-mcp": "file:../mcp-server",
+    "next": "16.2.11",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}

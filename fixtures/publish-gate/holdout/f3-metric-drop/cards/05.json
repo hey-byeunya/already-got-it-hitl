@@ -1,0 +1,32 @@
+{
+  "card_no": 5,
+  "kind": "text",
+  "title": "개발 활동 — 잠잠한 한 주",
+  "body": [
+    "오픈 이슈 1건 (#8, 12일째 미해결)",
+    "커밋 3건 (작성자 1인)",
+    "병합 PR 0건"
+  ],
+  "sources": [
+    "get_dev_activity · open_issues (#8 위시 정렬 옵션 추가)",
+    "get_dev_activity · commits.count (3건)",
+    "get_dev_activity · summary.merged_this_period (0건)"
+  ],
+  "accent": "accent",
+  "category": "fyi",
+  "layers": {
+    "title": [
+      "개발 활동 — 잠잠한 한 주"
+    ],
+    "body": [
+      "오픈 이슈 1건 (#8, 12일째 미해결)",
+      "커밋 3건 (작성자 1인)",
+      "병합 PR 0건"
+    ],
+    "source": [
+      "get_dev_activity · open_issues (#8 위시 정렬 옵션 추가)",
+      "get_dev_activity · commits.count (3건)",
+      "get_dev_activity · summary.merged_this_period (0건)"
+    ]
+  }
+}

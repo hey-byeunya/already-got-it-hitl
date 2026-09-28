@@ -1,0 +1,38 @@
+{
+  "card_no": 2,
+  "kind": "metric",
+  "title": "지금 손봐야 할 것: 앱 에러 증가",
+  "body": [
+    "함수 오류 47건 (7일)",
+    "앱 에러 9건, 전주 2건",
+    "/wish 6건 · /api/wish 3건 집중",
+    "원인 미확인 — 배포 시점과 단순 비교 불가",
+    "GitHub 이슈 등록 제안"
+  ],
+  "sources": [
+    "get_system_health · function_errors.count (47건, 7일 윈도)",
+    "get_user_metrics · totals.errors_total (9건, 전주 2건)",
+    "get_user_metrics · errors_by_route (/wish 6건, /api/wish 3건)"
+  ],
+  "chart_path": "charts/02.svg",
+  "accent": "bad",
+  "category": "fix_now",
+  "layers": {
+    "title": [
+      "지금 손봐야 할 것: 앱 에러",
+      "증가"
+    ],
+    "body": [
+      "함수 오류 47건 (7일)",
+      "앱 에러 9건, 전주 2건",
+      "/wish 6건 · /api/wish 3건 집중",
+      "원인 미확인 — 배포 시점과 단순 비교 불가",
+      "GitHub 이슈 등록 제안"
+    ],
+    "source": [
+      "get_system_health · function_errors.count (47건, 7일 윈도)",
+      "get_user_metrics · totals.errors_total (9건, 전주 2건)",
+      "get_user_metrics · errors_by_route (/wish 6건, /api/wish 3건)"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "card_no": 3,
+  "kind": "metric",
+  "title": "앱 에러 6건 — /items/[id] 집중",
+  "body": [
+    "이번 주 앱 에러 6건 (전주 1건)",
+    "/items/[id] 4건 · /api/owned 2건",
+    "함수 오류 7일 47건 (별도 지표)",
+    "빌드 실패와의 인과관계는 확인 못 함",
+    "route별 url 응답 없음 — 링크 확인 못 함"
+  ],
+  "sources": [
+    "get_user_metrics · errors_by_route (route별 건수)",
+    "get_user_metrics · totals.errors_total (전주 대비)",
+    "get_system_health · function_errors.count"
+  ],
+  "chart_path": "charts/03.svg",
+  "accent": "bad",
+  "category": "fix_now",
+  "layers": {
+    "title": [
+      "앱 에러 6건 — /items/[id]",
+      "집중"
+    ],
+    "body": [
+      "이번 주 앱 에러 6건 (전주 1건)",
+      "/items/[id] 4건 · /api/owned 2건",
+      "함수 오류 7일 47건 (별도 지표)",
+      "빌드 실패와의 인과관계는 확인 못 함",
+      "route별 url 응답 없음 — 링크 확인 못 함"
+    ],
+    "source": [
+      "get_user_metrics · errors_by_route (route별 건수)",
+      "get_user_metrics · totals.errors_total (전주 대비)",
+      "get_system_health · function_errors.count"
+    ]
+  }
+}

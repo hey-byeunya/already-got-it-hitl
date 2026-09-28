@@ -1,0 +1,29 @@
+{
+  "card_no": 1,
+  "kind": "cover",
+  "title": "이미 있어\n주간 운영 브리핑\n2026-09-02 ~ 09-09",
+  "body": [
+    "시스템 · 사용자 · 개발 활동 요약"
+  ],
+  "sources": [
+    "get_system_health · summary",
+    "get_user_metrics · totals",
+    "get_dev_activity · summary"
+  ],
+  "accent": "accent",
+  "layers": {
+    "title": [
+      "이미 있어",
+      "주간 운영 브리핑",
+      "2026-09-02 ~ 09-09"
+    ],
+    "body": [
+      "시스템 · 사용자 · 개발 활동 요약"
+    ],
+    "source": [
+      "get_system_health · summary",
+      "get_user_metrics · totals",
+      "get_dev_activity · summary"
+    ]
+  }
+}

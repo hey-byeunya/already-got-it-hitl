@@ -1,0 +1,39 @@
+{
+  "card_no": 2,
+  "kind": "metric",
+  "title": "활성 사용자·가입\n직전 주 대비 급감\n원인은 아직 미확인",
+  "body": [
+    "활성 사용자 18명 (직전 44명)",
+    "가입 4건 (직전 19건)",
+    "있템 60·위시 15건 (직전 201·66건)",
+    "원인은 이 데이터로 단정 못 함",
+    "다음 주 추이로 재확인 필요"
+  ],
+  "sources": [
+    "get_user_metrics · series[].active_users (일별 추이 차트)",
+    "get_user_metrics · totals (이번 주 합계)",
+    "get_user_metrics · previous_period_totals (직전 주 비교)"
+  ],
+  "chart_path": "charts/02.svg",
+  "accent": "warn",
+  "category": "watch",
+  "layers": {
+    "title": [
+      "활성 사용자·가입",
+      "직전 주 대비 급감",
+      "원인은 아직 미확인"
+    ],
+    "body": [
+      "활성 사용자 18명 (직전 44명)",
+      "가입 4건 (직전 19건)",
+      "있템 60·위시 15건 (직전 201·66건)",
+      "원인은 이 데이터로 단정 못 함",
+      "다음 주 추이로 재확인 필요"
+    ],
+    "source": [
+      "get_user_metrics · series[].active_users (일별 추이 차트)",
+      "get_user_metrics · totals (이번 주 합계)",
+      "get_user_metrics · previous_period_totals (직전 주 비교)"
+    ]
+  }
+}

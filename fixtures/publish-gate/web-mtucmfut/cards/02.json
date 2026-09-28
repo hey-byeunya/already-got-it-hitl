@@ -1,0 +1,32 @@
+{
+  "card_no": 2,
+  "kind": "metric",
+  "title": "배포 실패 1건, 75분 뒤 복구",
+  "body": [
+    "9/5 18:05 dpl_b2 배포 실패",
+    "타입 에러: OwnedItem에 used_up_at 없음",
+    "app/items/[id]/page.tsx:42",
+    "9/5 19:20 dpl_b3로 재배포 성공"
+  ],
+  "sources": [
+    "get_system_health · deployments (dpl_b2 build_error)",
+    "get_system_health · deployments (dpl_b3 state)"
+  ],
+  "chart_path": "charts/02.svg",
+  "accent": "bad",
+  "layers": {
+    "title": [
+      "배포 실패 1건, 75분 뒤 복구"
+    ],
+    "body": [
+      "9/5 18:05 dpl_b2 배포 실패",
+      "타입 에러: OwnedItem에 used_up_at 없음",
+      "app/items/[id]/page.tsx:42",
+      "9/5 19:20 dpl_b3로 재배포 성공"
+    ],
+    "source": [
+      "get_system_health · deployments (dpl_b2 build_error)",
+      "get_system_health · deployments (dpl_b3 state)"
+    ]
+  }
+}

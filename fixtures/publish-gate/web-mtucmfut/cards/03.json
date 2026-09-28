@@ -1,0 +1,31 @@
+{
+  "card_no": 3,
+  "kind": "text",
+  "title": "함수 오류 47건, 7일 누적",
+  "body": [
+    "7일간 함수 오류 47건 발생",
+    "비교할 이전 기간 값 없음",
+    "많은지 적은지는 확인 못함",
+    "오류 유형별 detail은 이 도구로 확인 불가",
+    "로그 기반 원인 조사 필요"
+  ],
+  "sources": [
+    "get_system_health · function_errors.count"
+  ],
+  "accent": "warn",
+  "layers": {
+    "title": [
+      "함수 오류 47건, 7일 누적"
+    ],
+    "body": [
+      "7일간 함수 오류 47건 발생",
+      "비교할 이전 기간 값 없음",
+      "많은지 적은지는 확인 못함",
+      "오류 유형별 detail은 이 도구로 확인 불가",
+      "로그 기반 원인 조사 필요"
+    ],
+    "source": [
+      "get_system_health · function_errors.count"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "card_no": 2,
+  "kind": "text",
+  "title": "9/5 배포 실패, 75분 만에 복구",
+  "body": [
+    "9/5 19:20 복구 배포 dpl_b3(commit 66ee77f)로 정상화",
+    "앞서 9/5 18:05 배포(dpl_b2, commit 44cc55d) 빌드 실패",
+    "app/items/[id]/page.tsx:42",
+    "OwnedItem에 used_up_at 속성 없음 (타입 에러)",
+    "실패~복구까지 약 75분",
+    "배포 url·commit_url 응답 없음 — 링크 확인 못 함"
+  ],
+  "sources": [
+    "get_system_health · deployments[2].state (dpl_b3 복구, commit 66ee77f)",
+    "get_system_health · deployments[1].build_error (dpl_b2, commit 44cc55d)"
+  ],
+  "accent": "bad",
+  "category": "fix_now",
+  "layers": {
+    "title": [
+      "9/5 배포 실패, 75분 만에 복구"
+    ],
+    "body": [
+      "9/5 19:20 복구 배포 dpl_b3(commit 66ee77f)로",
+      "정상화",
+      "앞서 9/5 18:05 배포(dpl_b2, commit 44cc55d) 빌드",
+      "실패",
+      "app/items/[id]/page.tsx:42",
+      "OwnedItem에 used_up_at 속성 없음 (타입 에러)",
+      "실패~복구까지 약 75분",
+      "배포 url·commit_url 응답 없음 — 링크 확인 못 함"
+    ],
+    "source": [
+      "get_system_health · deployments[2].state (dpl_b3 복구, commit 66ee77f)",
+      "get_system_health · deployments[1].build_error (dpl_b2, commit 44cc55d)"
+    ]
+  }
+}

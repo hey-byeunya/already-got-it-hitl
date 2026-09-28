@@ -1,0 +1,36 @@
+{
+  "card_no": 5,
+  "kind": "text",
+  "title": "열린 이슈 2건, 5일째 대기",
+  "body": [
+    "#11 모바일 카테고리 필터 겹침 (5일째)",
+    "#13 쓴템 표시가 목록에서 사라짐 (3일째)",
+    "PR #14 오픈, 4일째 미병합",
+    "이번 주 커밋 21건 · 병합 3건 (작성자 1명)",
+    "#13과 /api/owned 관련성은 확인 못 함"
+  ],
+  "sources": [
+    "get_dev_activity · open_issues (#11, #13)",
+    "get_dev_activity · pull_requests (#14)",
+    "get_dev_activity · summary"
+  ],
+  "accent": "warn",
+  "category": "watch",
+  "layers": {
+    "title": [
+      "열린 이슈 2건, 5일째 대기"
+    ],
+    "body": [
+      "#11 모바일 카테고리 필터 겹침 (5일째)",
+      "#13 쓴템 표시가 목록에서 사라짐 (3일째)",
+      "PR #14 오픈, 4일째 미병합",
+      "이번 주 커밋 21건 · 병합 3건 (작성자 1명)",
+      "#13과 /api/owned 관련성은 확인 못 함"
+    ],
+    "source": [
+      "get_dev_activity · open_issues (#11, #13)",
+      "get_dev_activity · pull_requests (#14)",
+      "get_dev_activity · summary"
+    ]
+  }
+}

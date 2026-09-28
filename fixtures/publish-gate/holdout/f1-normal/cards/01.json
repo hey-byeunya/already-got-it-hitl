@@ -1,0 +1,29 @@
+{
+  "card_no": 1,
+  "kind": "cover",
+  "title": "이번 주 「이미 있어」, 운영 브리핑",
+  "body": [
+    "기간 2026.09.02 ~ 09.09",
+    "배포 2건 모두 성공, 신규가입 19명",
+    "활성 사용자 44명"
+  ],
+  "sources": [
+    "get_system_health · summary (배포 2건, 오류 0건)",
+    "get_user_metrics · totals (신규가입 19, 활성 44)"
+  ],
+  "accent": "accent",
+  "layers": {
+    "title": [
+      "이번 주 「이미 있어」, 운영 브리핑"
+    ],
+    "body": [
+      "기간 2026.09.02 ~ 09.09",
+      "배포 2건 모두 성공, 신규가입 19명",
+      "활성 사용자 44명"
+    ],
+    "source": [
+      "get_system_health · summary (배포 2건, 오류 0건)",
+      "get_user_metrics · totals (신규가입 19, 활성 44)"
+    ]
+  }
+}

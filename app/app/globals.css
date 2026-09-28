@@ -1,0 +1,380 @@
+/**
+ * 터미널 스타일 — docs/ui-standalone.html (Claude Design 「운영 브리핑 개선안 v4」) 이식.
+ *
+ * 왜 터미널인가: 이 앱이 보여줘야 하는 것이 상한 대비 소진률, usage_known:false,
+ * 폴링 정지, 무효가 된 대기 콜백처럼 **계기판에 가까운 값**이다. CLI 은유가 그것들에
+ * 각각 자리를 준다.
+ *
+ * 다크 단일 테마다. prefers-color-scheme 분기를 두지 않는다 —
+ * 라이트 모드 기기에서도 같은 화면이 나와야 캡처가 재현된다.
+ */
+
+:root {
+  /* 배경 — 깊은 쪽에서 얕은 쪽으로 */
+  --deep: #050706;        /* 최심: 로그 열 · pre */
+  --panel: #0a0d0c;       /* 패널 */
+  --raised: #0e1412;      /* 타이틀바 · 카드 */
+  --btn: #111a17;         /* 버튼 */
+  --hatch: #0f1613;       /* 자리표시 줄무늬 */
+  --seg: #1a2621;         /* 선택된 세그먼트 */
+
+  /* 경계 */
+  --line: #1d2723;        /* 기본 */
+  --line-in: #141c19;     /* 내부 구획 */
+  --line-hi: #2c3a35;     /* 강조 */
+  --line-faint: #101715;  /* 행 구분 */
+  --bar-empty: #233029;   /* 게이지 빈칸 */
+
+  /* 글자 */
+  --ink: #e8efeb;         /* 강조 */
+  --text: #cfd8d3;        /* 기본 */
+  --prose: #a8b6af;       /* 한글 본문 */
+  --muted: #8b9a93;       /* 흐림 */
+  --faint: #3c4a44;       /* 가장 흐림 */
+
+  /* 강조와 상태 */
+  --accent: #4ee08a;      /* 초록 (주) */
+  --accent-hi: #8af3b4;   /* hover */
+  --on-accent: #05100a;   /* 초록 위 글자 */
+  --warn: #e8c04e;        /* 호박 — 대기 · 결측 · 상한 */
+  --danger: #e2604b;      /* 빨강 경계 */
+  --danger-ink: #ff8b74;  /* 빨강 글자 */
+
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --sans: 'Pretendard Variable', Pretendard, -apple-system, 'Apple SD Gothic Neo', sans-serif;
+
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--deep);
+  color: var(--text);
+  font: 13px/1.7 var(--mono);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 한글 문장은 모노로 읽기 어렵다. 산문에만 Pretendard 를 쓴다. */
+.prose { font-family: var(--sans); color: var(--prose); text-wrap: pretty; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hi); }
+
+main { max-width: 1440px; margin: 0 auto; padding: 24px; }
+h1, h2 { margin: 0; font-weight: 700; }
+
+@keyframes blink { 0%, 49% { opacity: 1 } 50%, 100% { opacity: 0 } }
+
+/* ─────────────────────────────────────────── 뼈대 */
+
+/* 창 하나. 안쪽 초록 발광은 그림자 대신 쓰는 터미널 특유의 잔광이다. */
+.win {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: inset 0 0 90px rgba(78, 224, 138, .035);
+}
+
+.titlebar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 14px; flex-wrap: wrap;
+  padding: 9px 14px;
+  background: var(--raised);
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+}
+
+.lights { display: flex; gap: 5px; }
+.lights i { width: 9px; height: 9px; border-radius: 99px; background: var(--line-hi); }
+.lights i:last-child { background: var(--accent); }
+
+.sechead {
+  font-size: 11px; letter-spacing: .14em; color: var(--accent);
+}
+
+.cursor {
+  display: inline-block; width: 7px; height: 13px;
+  background: var(--accent); margin-left: 7px; vertical-align: -2px;
+  animation: blink 1.1s step-end infinite;
+}
+
+.hatch {
+  border: 1px solid var(--line-in);
+  background: repeating-linear-gradient(45deg,
+    var(--panel), var(--panel) 7px, var(--hatch) 7px, var(--hatch) 14px);
+}
+
+.pane { padding: 16px 18px; }
+.pane + .pane { border-left: 1px solid var(--line-in); }
+
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.spread { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.note { color: var(--muted); font-size: 11px; line-height: 1.7; }
+
+/* ─────────────────────────────────────────── 버튼 */
+
+button {
+  font: inherit; font-size: 11.5px; padding: 6px 10px; cursor: pointer;
+  border-radius: 0;
+  background: var(--btn); border: 1px solid var(--line-hi); color: var(--text);
+}
+button:hover:not(:disabled) { border-color: var(--muted); }
+button:disabled { opacity: .45; cursor: default; }
+
+button.primary {
+  background: var(--accent); border-color: var(--accent); color: var(--on-accent);
+  font-size: 12.5px; font-weight: 700; padding: 8px 14px;
+}
+button.primary:hover:not(:disabled) { background: var(--accent-hi); border-color: var(--accent-hi); }
+
+button.danger {
+  background: transparent; border-color: var(--danger); color: var(--danger-ink);
+  font-size: 12.5px; font-weight: 600; padding: 8px 14px;
+}
+
+/* 탭 — 채워진 쪽이 선택된 것이다. */
+button.tab {
+  border: none; background: transparent; color: var(--muted);
+  font-weight: 500; padding: 6px 10px;
+}
+button.tab[aria-pressed='true'] { background: var(--accent); color: var(--on-accent); }
+.tabs { display: flex; border: 1px solid var(--line); }
+
+/*
+ * 초록 채움 버튼. `--cards` 탭이 켜졌을 때와 같은 색이고,
+ * 크기는 기본 버튼 그대로다 — 옆에 서는 「다시 내보내기」와 나란히 보여야 한다.
+ * .primary 는 더 크고 굵어서 같은 줄에 두면 층이 진다.
+ */
+button.go {
+  background: var(--accent); border-color: var(--accent); color: var(--on-accent);
+  font-weight: 500;
+}
+button.go:hover:not(:disabled) { background: var(--accent-hi); border-color: var(--accent-hi); }
+
+/* 세그먼트 — 상태 전환용 작은 토글 */
+button.seg {
+  font-size: 11px; padding: 5px 9px;
+  background: transparent; border: 1px solid var(--line); color: var(--muted);
+}
+button.seg[aria-pressed='true'] {
+  background: var(--seg); border-color: var(--accent); color: var(--ink);
+}
+
+/* 링크처럼 보이지만 페이지를 떠나지 않는 버튼. */
+button.linky {
+  font: inherit; padding: 0; background: transparent; border: none;
+  color: var(--accent); cursor: pointer;
+}
+button.linky:hover { color: var(--accent-hi); }
+
+button.dot {
+  width: 10px; height: 10px; padding: 0;
+  border: 1px solid var(--line-hi); background: transparent;
+}
+button.dot[aria-pressed='true'] { background: var(--accent); border-color: var(--accent); }
+
+/* 선택지 버튼 — 질문 게이트 */
+button.opt {
+  text-align: left; width: 100%; padding: 11px 13px;
+  background: var(--raised); border: 1px solid var(--line-hi);
+}
+button.opt .l { display: block; font-size: 12.5px; color: var(--ink); }
+button.opt .d {
+  display: block; font-family: var(--sans); font-size: 12px; line-height: 1.7;
+  color: var(--muted); margin-top: 4px;
+}
+/* 고른 것. 아직 보내지 않았다 - 보내기 전까지는 되돌릴 수 있다. */
+button.opt[aria-pressed='true'] {
+  border-color: var(--accent); background: var(--seg);
+}
+button.opt[aria-pressed='true'] .l { color: var(--accent); }
+
+/*
+  접는 칸. 출처는 길어질 수 있어 기본은 닫아 두고 개수만 보인다 -
+  몇 건인지는 열지 않아도 알 수 있어야 한다.
+*/
+details.fold > summary {
+  list-style: none; cursor: pointer; display: inline-flex; gap: 6px; align-items: baseline;
+}
+details.fold > summary::-webkit-details-marker { display: none; }
+details.fold > summary::before { content: '▸'; color: var(--faint); }
+details.fold[open] > summary::before { content: '▾'; }
+details.fold > summary:hover::before { color: var(--accent); }
+details.fold > summary:focus-visible { outline: 1px solid var(--line-hi); outline-offset: 2px; }
+
+/* ─────────────────────────────────────────── 입력 */
+
+select, input[type=text], input[type=date], textarea {
+  font: inherit; font-size: 12px; width: 100%;
+  padding: 8px 10px; border-radius: 0;
+  border: 1px solid var(--line-hi); background: var(--deep); color: var(--text);
+}
+
+/*
+ * 날짜 칸은 두 개가 300px 사이드바에 나란히 들어간다.
+ * 기본 크기로는 브라우저가 그리는 «2026. 09. 02.» 와 달력 아이콘이 칸을 넘겨 깨진다.
+ */
+textarea { resize: vertical; line-height: 1.6; }
+input[type=date] {
+  font-size: 10.5px; padding: 6px 6px; min-width: 0;
+}
+input[type=date]::-webkit-calendar-picker-indicator {
+  filter: invert(1) opacity(.45); margin-left: 0; padding: 0; cursor: pointer;
+}
+select:focus, input[type=text]:focus, textarea:focus, button:focus-visible {
+  outline: 1px solid var(--accent); outline-offset: 1px;
+}
+
+/* ─────────────────────────────────────────── 배지와 칩 */
+
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11.5px; padding: 5px 9px; border: 1px solid currentColor;
+}
+.badge i { width: 6px; height: 6px; background: currentColor; }
+
+.chip {
+  padding: 5px 8px; font-size: 11px;
+  border: 1px solid var(--line); color: var(--muted); background: transparent;
+}
+.chip[aria-pressed='true'] { background: var(--seg); border-color: var(--line-hi); color: var(--ink); }
+
+/* 카드 종류 딱지 */
+.cardkind { letter-spacing: .12em; padding: 4px 7px; font-size: 11px; }
+
+/* ─────────────────────────────────────────── 계기 */
+
+/* ASCII 게이지. 채운 칸과 빈 칸을 색으로만 나눈다 — 폰트가 없어도 형태가 남는다. */
+.bar { letter-spacing: .1em; font-size: 11px; }
+.bar .empty { color: var(--bar-empty); }
+
+.stat .k { color: var(--muted); font-size: 11px; }
+.stat .v {
+  font-size: 17px; font-weight: 700; color: var(--ink); line-height: 1.4;
+  font-variant-numeric: tabular-nums;
+}
+
+.tile { border: 1px solid var(--line); padding: 9px 11px; }
+
+/* ─────────────────────────────────────────── 본문 */
+
+pre {
+  margin: 0; padding: 11px 13px;
+  background: var(--deep); border: 1px solid var(--line);
+  font: inherit; font-size: 11.5px; line-height: 1.8; color: var(--muted);
+  white-space: pre-wrap; word-break: break-word; overflow-x: auto;
+}
+
+details > summary { cursor: pointer; list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+
+/* 카드 — 왼쪽 굵은 선이 심각도를 나타낸다. */
+.card {
+  border: 1px solid var(--line); border-left-width: 3px;
+  background: var(--raised); padding: 15px 17px;
+}
+.card h3 {
+  font-family: var(--sans); font-size: 17px; font-weight: 700; line-height: 1.5;
+  color: var(--ink); margin: 0 0 8px; text-wrap: pretty;
+}
+.card .body {
+  font-family: var(--sans); font-size: 13.5px; line-height: 1.8;
+  color: var(--prose); text-wrap: pretty;
+}
+.card .src {
+  margin-top: 11px; padding-top: 10px; border-top: 1px solid var(--line);
+  font-size: 11.5px; color: var(--muted);
+}
+
+/*
+ * 차트 SVG 는 흰 배경을 스스로 그린다 (mcp-server/src/chart.ts).
+ * 어둡게 바꾸지 않고 액자로 감싼다 — 내보내는 카드 PNG 도 같은 조합이고 이미 검증된 모양이다.
+ */
+.frame {
+  border: 1px solid var(--line); background: var(--raised); padding: 10px;
+  display: flex; justify-content: center;
+}
+img.chart { display: block; width: 100%; background: #fff; }
+
+/*
+ * 카드 안의 차트는 높이를 묶는다. 폭에 맞춰 두면 960×540 이 카드 절반을 차지해
+ * 문장보다 그림이 먼저 읽힌다 — 카드뉴스에서는 문장이 먼저다.
+ * (전체 화면 캡처를 열어 보고 알았다.)
+ */
+.card .frame img.chart { width: auto; max-width: 100%; max-height: 240px; }
+
+/* ─────────────────────────────────────────── 로그 열 */
+
+.log { border-left: 1px solid var(--line); background: var(--deep); padding: 16px 16px 18px; min-width: 0; }
+.log .line {
+  display: grid; grid-template-columns: 48px 16px minmax(0, 1fr); gap: 8px;
+  padding: 7px 0; border-bottom: 1px solid var(--line-faint);
+  font-size: 11.5px; line-height: 1.7;
+}
+.log .when { color: var(--muted); font-variant-numeric: tabular-nums; }
+.log .sub { color: var(--muted); }
+
+/* ─────────────────────────────────────────── 알림 띠 */
+
+.strip { padding: 16px 18px; border-bottom: 1px solid var(--line); font-size: 12.5px; line-height: 1.85; }
+.strip.warn { background: rgba(232, 192, 78, .06); border-bottom-color: rgba(232, 192, 78, .32); }
+.strip.bad { background: rgba(226, 96, 75, .07); border-bottom-color: rgba(226, 96, 75, .3); }
+.strip b { color: var(--ink); font-weight: 500; }
+
+/* ─────────────────────────────────────────── 색 유틸 (인라인 style 대신) */
+
+.ink { color: var(--ink); }
+.mut { color: var(--muted); }
+.fnt { color: var(--faint); }
+.ok { color: var(--accent); }
+.wrn { color: var(--warn); }
+.bad { color: var(--danger-ink); }
+
+/* ─────────────────────────────────────────── 모달 */
+
+.modal {
+  position: fixed; inset: 0; z-index: 50;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px; background: rgba(5, 7, 6, .88);
+}
+.modal .frame-win {
+  background: var(--panel); border: 1px solid var(--line-hi);
+  box-shadow: inset 0 0 90px rgba(78, 224, 138, .04);
+  max-width: 100%; max-height: 100%;
+  display: flex; flex-direction: column; min-height: 0;
+}
+.modal .body {
+  padding: 14px; overflow: auto; min-height: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+/* 카드는 세로로 길다. 창 높이를 넘지 않게 묶는다 — 넘치면 아래가 잘려 보이지 않는다. */
+.modal img { display: block; max-width: 100%; max-height: calc(100vh - 190px); }
+
+/* ─────────────────────────────────────────── 툴팁
+
+   네이티브 title 은 브라우저 크롬이 그린다 — 밝은 배경에 1초 지연이고,
+   캡처에도 잡히지 않아 제출물에서는 없는 것과 같다. 그래서 직접 그린다.
+   읽어 주는 도구를 위해 호출부에서 aria-label 을 함께 단다.
+*/
+
+[data-tip] { position: relative; }
+[data-tip][tabindex]:focus-visible { outline: 1px solid var(--line-hi); outline-offset: 2px; }
+
+[data-tip]::after {
+  content: attr(data-tip);
+  position: absolute; left: 0; bottom: calc(100% + 6px); z-index: 20;
+  width: max-content; max-width: 260px;
+  padding: 7px 9px;
+  background: var(--raised); border: 1px solid var(--line-hi); color: var(--text);
+  font-size: 11px; line-height: 1.6; text-align: left; white-space: normal;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .55);
+  opacity: 0; visibility: hidden; transition: opacity .09s linear;
+  pointer-events: none;
+}
+[data-tip]:hover::after, [data-tip]:focus-visible::after { opacity: 1; visibility: visible; }
+
+/* 오른쪽 끝 칸에서는 왼쪽으로 펴야 창을 넘지 않는다. */
+[data-tip][data-tip-align='right']::after { left: auto; right: 0; }
+/* 화면 맨 위에 붙은 것은 위로 띄우면 잘린다 — 아래로 내린다. */
+[data-tip][data-tip-below]::after { bottom: auto; top: calc(100% + 6px); }

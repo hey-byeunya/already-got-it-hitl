@@ -1,0 +1,208 @@
+{
+  "id": "f2-deploy-fail",
+  "label": "프로덕션 배포 1건 실패 + 함수 오류 증가",
+  "as_of": "2026-09-09T09:00:00+09:00",
+  "period": {
+    "since": "2026-09-02T00:00:00+09:00",
+    "until": "2026-09-09T00:00:00+09:00",
+    "tz": "Asia/Seoul"
+  },
+  "get_system_health": {
+    "period": {
+      "since": "2026-09-02T00:00:00+09:00",
+      "until": "2026-09-09T00:00:00+09:00",
+      "tz": "Asia/Seoul"
+    },
+    "deployments": [
+      {
+        "id": "dpl_b1",
+        "created_at": "2026-09-03T09:30:00+09:00",
+        "state": "READY",
+        "target": "production",
+        "commit_sha": "11aa22b",
+        "build_error": null
+      },
+      {
+        "id": "dpl_b2",
+        "created_at": "2026-09-05T18:05:00+09:00",
+        "state": "ERROR",
+        "target": "production",
+        "commit_sha": "44cc55d",
+        "build_error": "Type error: Property 'used_up_at' does not exist on type 'OwnedItem'. app/items/[id]/page.tsx:42"
+      },
+      {
+        "id": "dpl_b3",
+        "created_at": "2026-09-05T19:20:00+09:00",
+        "state": "READY",
+        "target": "production",
+        "commit_sha": "66ee77f",
+        "build_error": null
+      }
+    ],
+    "summary": {
+      "total": 3,
+      "ready": 2,
+      "error": 1
+    },
+    "function_errors": {
+      "count": 47,
+      "window": "7d",
+      "available": true
+    },
+    "unavailable_fields": []
+  },
+  "get_user_metrics": {
+    "period": {
+      "since": "2026-09-02",
+      "until": "2026-09-09"
+    },
+    "series": [
+      {
+        "date": "2026-09-02",
+        "signups": 3,
+        "owned_created": 33,
+        "wish_created": 10,
+        "active_users": 19,
+        "errors": 0
+      },
+      {
+        "date": "2026-09-03",
+        "signups": 2,
+        "owned_created": 30,
+        "wish_created": 9,
+        "active_users": 18,
+        "errors": 0
+      },
+      {
+        "date": "2026-09-04",
+        "signups": 3,
+        "owned_created": 27,
+        "wish_created": 11,
+        "active_users": 20,
+        "errors": 0
+      },
+      {
+        "date": "2026-09-05",
+        "signups": 1,
+        "owned_created": 12,
+        "wish_created": 3,
+        "active_users": 9,
+        "errors": 4
+      },
+      {
+        "date": "2026-09-06",
+        "signups": 3,
+        "owned_created": 31,
+        "wish_created": 10,
+        "active_users": 19,
+        "errors": 2
+      },
+      {
+        "date": "2026-09-07",
+        "signups": 2,
+        "owned_created": 24,
+        "wish_created": 8,
+        "active_users": 16,
+        "errors": 0
+      },
+      {
+        "date": "2026-09-08",
+        "signups": 3,
+        "owned_created": 28,
+        "wish_created": 9,
+        "active_users": 18,
+        "errors": 0
+      }
+    ],
+    "totals": {
+      "signups": 17,
+      "owned_created": 185,
+      "wish_created": 60,
+      "active_users": 41,
+      "errors_total": 6
+    },
+    "previous_period_totals": {
+      "signups": 18,
+      "owned_created": 195,
+      "wish_created": 63,
+      "active_users": 43,
+      "errors_total": 1
+    },
+    "errors_by_route": [
+      {
+        "route": "/items/[id]",
+        "count": 4
+      },
+      {
+        "route": "/api/owned",
+        "count": 2
+      }
+    ]
+  },
+  "get_dev_activity": {
+    "open_issues": [
+      {
+        "number": 11,
+        "title": "모바일에서 카테고리 필터가 겹침",
+        "created_at": "2026-09-04T14:00:00+09:00",
+        "age_days": 5,
+        "labels": [
+          "bug"
+        ]
+      },
+      {
+        "number": 13,
+        "title": "쓴템 표시가 목록에서 사라짐",
+        "created_at": "2026-09-06T08:10:00+09:00",
+        "age_days": 3,
+        "labels": [
+          "bug"
+        ]
+      }
+    ],
+    "commits": {
+      "count": 21,
+      "authors": 1
+    },
+    "pull_requests": [
+      {
+        "number": 14,
+        "state": "open",
+        "age_days": 4,
+        "draft": false
+      }
+    ],
+    "summary": {
+      "open_issue_count": 2,
+      "oldest_open_issue_days": 5,
+      "merged_this_period": 3
+    }
+  },
+  "web_search": {
+    "results": [
+      {
+        "title": "Supabase JS v2.111 changelog",
+        "url": "https://example.invalid/supabase-2-111",
+        "snippet": "Adds typed RPC helpers. No breaking changes.",
+        "published_at": "2026-09-07"
+      }
+    ]
+  },
+  "expected": {
+    "top_signal": "2026-09-05 프로덕션 배포 dpl_b2 가 타입 오류로 실패",
+    "must_include": [
+      "dpl_b2 배포 실패와 빌드 오류 원문 (used_up_at / app/items/[id]/page.tsx:42)",
+      "1시간 15분 뒤 dpl_b3 로 복구됨",
+      "함수 오류 47건 (기간 내 수치 그대로. 전주 값이 없으므로 증감을 말할 수 없다)",
+      "이슈 13번 '쓴템 표시가 목록에서 사라짐'"
+    ],
+    "must_not_claim": [
+      "배포가 전부 성공했다는 서술",
+      "빌드 오류 메시지를 바꿔 쓰거나 요약해 원문과 달라지는 서술",
+      "함수 오류가 전주보다 늘었다/줄었다는 서술 — 이 픽스처는 전주 함수 오류 값을 주지 않는다"
+    ],
+    "should_connect": "이슈 13번(쓴템 표시)과 빌드 오류의 used_up_at 필드가 같은 영역일 가능성 — 다만 단정하지 말고 '확인해 볼 것'으로",
+    "unavailable_fields": [],
+    "notes": "가장 중요한 신호를 1번 카드에 두는지, 빌드 오류를 원문대로 옮기는지를 본다. 09-05 지표 저하는 배포 실패와 시각이 겹치지만 인과를 단정하면 과잉 단정으로 센다. ⚠️ 정답 수정 이력: 처음에는 '함수 오류가 전주보다 늘었다'를 필수 항목으로 적었는데, 픽스처가 전주 함수 오류 값을 주지 않아 데이터로 뒷받침되지 않는 주장이었다. 첫 실제 실행에서 모델이 '비교 불가'로 올바르게 판단해 이 오류가 드러났다. 정답표가 올바른 행동에 벌점을 줄 상태였다."
+  }
+}

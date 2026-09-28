@@ -1,0 +1,31 @@
+{
+  "card_no": 7,
+  "kind": "text",
+  "title": "Supabase JS v2.111 소식",
+  "body": [
+    "타입 RPC 헬퍼 추가",
+    "breaking change 없음",
+    "게시일 2026-09-07 확인됨",
+    "next/react/tailwind는 해당 소식 없음"
+  ],
+  "sources": [
+    "web_search · results[].title (Supabase JS v2.111 changelog)",
+    "web_search · results[].published_at"
+  ],
+  "accent": "accent",
+  "layers": {
+    "title": [
+      "Supabase JS v2.111 소식"
+    ],
+    "body": [
+      "타입 RPC 헬퍼 추가",
+      "breaking change 없음",
+      "게시일 2026-09-07 확인됨",
+      "next/react/tailwind는 해당 소식 없음"
+    ],
+    "source": [
+      "web_search · results[].title (Supabase JS v2.111 changelog)",
+      "web_search · results[].published_at"
+    ]
+  }
+}
